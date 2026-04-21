@@ -147,7 +147,7 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white border-b" id="counter-section">
+    <section id="about" class="py-16 bg-white border-b" id="counter-section">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
@@ -206,7 +206,7 @@
         </div>
     </section>
 
-    <section class="py-20 bg-gold">
+    <section id="services" class="py-20 bg-gold">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
             <div class="mb-8 md:mb-0 md:w-2/3">
                 <h2 class="text-navy text-3xl md:text-5xl font-black uppercase leading-tight mb-4">
@@ -221,6 +221,7 @@
             </div>
         </div>
     </section>
+
     <section id="contact" class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <div class="bg-navy rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
@@ -312,10 +313,10 @@
             });
         };
 
-        const section = document.getElementById('counter-section');
+        const section = document.getElementById('about'); // ID burda düzəldildi
         let started = false;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > (section.offsetTop - window.innerHeight)) {
+            if (section && window.scrollY > (section.offsetTop - window.innerHeight)) {
                 if (!started) { startCounters(); started = true; }
             }
         });
